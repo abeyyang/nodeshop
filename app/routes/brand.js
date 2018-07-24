@@ -32,3 +32,17 @@ exports.save = function(req, res) {
         })
     }
 }
+exports.detail = function(req, res) {
+    var id = req.query.id || null;
+    if (id) {
+        Brand.findById(id, function(err, brand) {
+            if (err) console.log(err);
+            res.status(200, 'success');
+            res.send({
+                errorno : 0,
+                data: brand
+            });
+            res.end();
+        })
+    }
+}
