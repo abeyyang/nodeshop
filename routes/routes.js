@@ -11,5 +11,7 @@ module.exports = function(app) {
     app.post('/admin/brand/new', Brand.save);
     app.post('/admin/channel/new', Channel.save);
     app.get('/api/goods/list', Goods.list);
-    app.post('/admin/goods/new', Goods.save)
+    app.post('/admin/goods/new', Goods.save);
+    app.get('/api/goods/detail', Goods.detail);
+    app.post('/admin/gallery/new', Goods.gallerySave)
 }

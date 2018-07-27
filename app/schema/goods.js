@@ -1,11 +1,11 @@
 var mongoose = require('mongoose');
+var ObjectId = mongoose.Schema.Types.ObjectId;
 
-var ObjectId = mongoose.Schema.Types.ObjectId
-console.log(ObjectId, 'ObjectId')
 var GoodsSchema = new mongoose.Schema({
     list_pic_url: String,
     name: String,
     retail_price: String,
+    goods_brief: String,
     brand: {
         type: ObjectId,
         ref: 'Brand'
